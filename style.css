@@ -1,6 +1,7 @@
 *{
     padding: 0%;
     margin: 0%;
+    box-sizing: border-box;
 }
 body{
     background-color: rgb(64, 245, 245);
@@ -51,22 +52,31 @@ i.open-nav{
     font-size: 28px;
     color: white;
 }
-.social-links{
-    display: none;
-}
-
 /* --------------------- */
 
 @media screen and (max-width: 768px) {
-    .nav-links{
-        display: block;
+    nav{
         position: fixed;
         background-color: teal;
         padding-top: 50px;
         height: 100vh;
-        width: 200px;
-        top: 0;
-        right: 0;
-        border-radius: 0 0 0 200px;
+        width: 350px;
+        top: 0px;
+        right: 0px;
+        padding: 40px 60px;
+        border-radius: 0 0 0 50%;
+        z-index: 100;
+        transition: .5s
     }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+    }
+    i.open-nav{
+        display: inline;
+    }
+    i.close-nav{
+        display: inline;
+    }
+    
 }
